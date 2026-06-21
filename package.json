@@ -1,0 +1,29 @@
+{
+  "name": "finance-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that exposes a personal-finance SQLite database to LLM clients as a set of typed, schema-validated tools.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Pavel Kosik",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "ai-tools",
+    "personal-finance",
+    "sqlite"
+  ],
+  "bin": {
+    "finance-mcp-server": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "init-db": "node scripts/init-db.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1",
+    "better-sqlite3": "^11",
+    "zod": "^3"
+  }
+}
